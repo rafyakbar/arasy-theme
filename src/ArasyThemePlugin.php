@@ -161,7 +161,10 @@ class ArasyThemePlugin implements Plugin
                     return '';
                 }
 
-                return '<style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>';
+                return '<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>';
             }
         );
     }
