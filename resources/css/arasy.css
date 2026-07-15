@@ -137,9 +137,16 @@
 }
 
 /* ---------- Sidebar Layout (Full Height) ---------- */
-.fi-body-has-topbar .fi-sidebar {
+.fi-body-has-topbar .fi-sidebar,
+.fi-sidebar {
     top: 0 !important;
     height: 100dvh !important;
+    margin-top: 0 !important;
+}
+
+.fi-sidebar-header-ctn {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .fi-body-has-topbar .fi-sidebar-header {
