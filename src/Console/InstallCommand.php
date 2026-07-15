@@ -19,10 +19,10 @@ class InstallCommand extends Command
 
     public function handle(): void
     {
-        $this->components->info('');
+        $this->newLine();
         $this->components->info('Arasy Theme Installer');
-        $this->components->info('   Modern admin theme for FilamentPHP');
-        $this->components->info('');
+        $this->line('   Modern admin theme for FilamentPHP');
+        $this->newLine();
 
         $panels = Filament::getPanels();
 
@@ -82,20 +82,20 @@ class InstallCommand extends Command
             $this->components->warn('Please verify the import order in: ' . $themeCssPath);
         }
 
-        $this->components->info('');
+        $this->newLine();
         $this->components->info('Arasy installed successfully!');
-        $this->components->info('');
+        $this->newLine();
         $this->components->info('Next steps:');
-        $this->components->info('');
-        $this->components->info('1. Register the plugin in your panel provider:');
-        $this->components->info('');
-        $this->components->info('   use ArasyTheme\ArasyThemePlugin;');
-        $this->components->info('');
-        $this->components->info('   ->plugin(ArasyThemePlugin::make())');
-        $this->components->info('');
-        $this->components->info('2. Compile your assets:');
-        $this->components->info('');
-        $this->components->info('   npm run build');
-        $this->components->info('');
+        $this->newLine();
+        $this->line('1. Register the plugin in your panel provider:');
+        $this->newLine();
+        $this->line('   use ArasyTheme\ArasyThemePlugin;');
+        $this->newLine();
+        $this->line('   ->plugin(ArasyThemePlugin::make())');
+        $this->newLine();
+        $this->line('2. Compile your assets:');
+        $this->newLine();
+        $this->line('   npm run build');
+        $this->newLine();
     }
 }
