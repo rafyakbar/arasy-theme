@@ -134,6 +134,35 @@
     text-transform: uppercase;
 }
 
+/* ---------- Sidebar Layout (Full Height) ---------- */
+.fi-body-has-topbar .fi-sidebar {
+    top: 0 !important;
+    height: 100dvh !important;
+}
+
+.fi-body-has-topbar .fi-sidebar-header {
+    display: flex !important;
+    box-shadow: none !important;
+    --tw-ring-color: transparent !important;
+    --tw-ring-shadow: 0 0 transparent !important;
+    border-bottom: none !important;
+}
+
+/* ---------- Topbar Layout (Content Area) ---------- */
+@media (min-width: 1024px) {
+    .fi-topbar-ctn {
+        margin-left: var(--sidebar-width);
+    }
+
+    .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-topbar-ctn {
+        margin-left: var(--collapsed-sidebar-width);
+    }
+}
+
+.fi-topbar-start > a {
+    display: none;
+}
+
 /* ---------- Card Components ---------- */
 .fi-section:not(.fi-section-not-contained),
 .fi-wi-stats-overview-stat,
