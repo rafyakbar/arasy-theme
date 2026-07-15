@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+/.phpunit.result.cache
+/.php_cs.cache
+/.phpcs-cache
+/.phpstan-cache
+/composer.lock
+/package-lock.json
+/yarn.lock
+.DS_Store
+Thumbs.db
+phpstan.neon
+phpunit.xml
+pint.json

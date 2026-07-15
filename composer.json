@@ -1,0 +1,71 @@
+{
+    "name": "arasy/arasy-theme",
+    "description": "Arasy Theme — a modern FilamentPHP v5 theme plugin inspired by TailAdmin design language. Features a fresh brand color palette, Outfit typography, consistent border radius, and full dark mode support.",
+    "keywords": [
+        "filament",
+        "filamentphp",
+        "filament-plugin",
+        "theme",
+        "laravel",
+        "tailadmin",
+        "arasy",
+        "dark-mode"
+    ],
+    "homepage": "https://github.com/arasy/arasy-theme",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Arasy Theme"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.29",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArasyTheme\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArasyTheme\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArasyTheme\\ArasyThemeServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "test": "pest",
+        "lint": "pint --test",
+        "analyse": "phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

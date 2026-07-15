@@ -1,0 +1,15 @@
+/*
+ * Arasy Theme — Vite theme stub for custom compilation.
+ * Publish to resources/css/filament/admin/arasy-theme.css via:
+ *   php artisan vendor:publish --tag=arasy-theme-vite
+ * Then add to vite.config.js and register on the panel:
+ *   ->viteTheme('resources/css/filament/admin/arasy-theme.css')
+ */
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@theme {
+    --font-sans: 'Outfit', ui-sans-serif, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --radius-xl: 1rem;
+    --radius-lg: 0.5rem;
+}
