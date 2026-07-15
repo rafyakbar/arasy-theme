@@ -169,7 +169,15 @@
         margin-left: var(--sidebar-width);
     }
 
+    .fi-layout {
+        margin-left: var(--sidebar-width);
+    }
+
     .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-topbar-ctn {
+        margin-left: var(--collapsed-sidebar-width);
+    }
+
+    .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-layout {
         margin-left: var(--collapsed-sidebar-width);
     }
 }
