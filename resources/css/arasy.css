@@ -137,11 +137,15 @@
 }
 
 /* ---------- Sidebar Layout (Full Height) ---------- */
-.fi-body-has-topbar .fi-sidebar,
-.fi-sidebar {
-    top: 0 !important;
-    height: 100dvh !important;
-    margin-top: 0 !important;
+@media (min-width: 1024px) {
+    .fi-body-has-topbar .fi-sidebar,
+    .fi-sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100dvh !important;
+        margin-top: 0 !important;
+    }
 }
 
 .fi-sidebar-header-ctn {
