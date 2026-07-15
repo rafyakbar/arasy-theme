@@ -94,6 +94,11 @@
 
 .fi-sidebar {
     border-right: 1px solid var(--arasy-sidebar-border);
+    padding: 0 !important;
+}
+
+.fi-sidebar-nav {
+    padding: 24px !important;
 }
 
 .fi-sidebar .fi-sidebar-item-btn {
@@ -143,6 +148,8 @@
     --tw-ring-color: transparent !important;
     --tw-ring-shadow: 0 0 transparent !important;
     border-bottom: none !important;
+    padding-top: 32px !important;
+    padding-bottom: 28px !important;
 }
 
 /* ---------- Topbar Layout (Content Area) ---------- */
