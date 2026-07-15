@@ -177,6 +177,14 @@
         margin-left: var(--collapsed-sidebar-width);
     }
 
+    .fi-main-ctn {
+        margin-left: var(--sidebar-width);
+    }
+
+    .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-main-ctn {
+        margin-left: var(--collapsed-sidebar-width);
+    }
+
     .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-layout {
         margin-left: var(--collapsed-sidebar-width);
     }
