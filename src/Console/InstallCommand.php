@@ -15,7 +15,7 @@ class InstallCommand extends Command
 
     protected $description = 'Install the Arasy theme for a Filament panel';
 
-    protected string $importPath = '../../../../vendor/arasy/arasy-theme/resources/css/arasy.css';
+    protected string $importPath = '../../../../vendor/rafyakbar/arasy-theme/resources/css/arasy.css';
 
     public function handle(): void
     {

@@ -17,7 +17,7 @@ A modern Filament theme inspired by TailAdmin, featuring vibrant indigo accents,
 ## Installation
 
 ```bash
-composer require arasy/arasy-theme
+composer require rafyakbar/arasy-theme:dev-main
 ```
 
 ### Automatic Setup
@@ -46,7 +46,7 @@ public function panel(Panel $panel): Panel
 2. Add the import to your panel's theme CSS (`resources/css/filament/{panel}/theme.css`):
 
 ```css
-@import '../../../../vendor/arasy/arasy-theme/resources/css/arasy.css';
+@import '../../../../vendor/rafyakbar/arasy-theme/resources/css/arasy.css';
 ```
 
 3. Compile your assets:
