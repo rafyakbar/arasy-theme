@@ -1,5 +1,5 @@
 {
-    "name": "arasy/arasy-theme",
+    "name": "rafyakbar/arasy-theme",
     "description": "Arasy Theme — a modern FilamentPHP v5 theme plugin inspired by TailAdmin design language. Features a fresh brand color palette, Outfit typography, consistent border radius, and full dark mode support.",
     "keywords": [
         "filament",
@@ -66,6 +66,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
