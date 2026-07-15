@@ -7,7 +7,6 @@ use Filament\Facades\Filament;
 use Filament\FontProviders\GoogleFontProvider;
 use Filament\Panel;
 use Filament\Support\Assets\Css;
-use Filament\Support\Colors\Color;
 use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\Support\Htmlable;
@@ -70,12 +69,36 @@ class ArasyThemePlugin implements Plugin
     {
         $panel
             ->colors([
-                'primary' => Color::Indigo,
-                'gray' => Color::Zinc,
-                'success' => Color::Emerald,
-                'warning' => Color::Amber,
-                'danger' => Color::Rose,
-                'info' => Color::Sky,
+                'primary' => [
+                    '50' => '#ecf3ff', '100' => '#dde9ff', '200' => '#c2d6ff',
+                    '300' => '#9cb9ff', '400' => '#7592ff', '500' => '#465fff',
+                    '600' => '#3641f5', '700' => '#252dae', '800' => '#252dae',
+                    '900' => '#161950', '950' => '#161950',
+                ],
+                'gray' => [
+                    '50' => '#f9fafb', '100' => '#f2f4f7', '200' => '#e4e7ec',
+                    '300' => '#d0d5dd', '400' => '#98a2b3', '500' => '#667085',
+                    '600' => '#475467', '700' => '#344054', '800' => '#1d2939',
+                    '900' => '#101828', '950' => '#0c111d',
+                ],
+                'success' => [
+                    '50' => '#ecfdf3', '100' => '#d1fadf', '300' => '#6ce9a6',
+                    '500' => '#12b76a', '600' => '#039855', '700' => '#027a48',
+                    '800' => '#05603a',
+                ],
+                'warning' => [
+                    '50' => '#fffaeb', '400' => '#fdb022', '500' => '#f79009',
+                    '600' => '#dc6803', '700' => '#b54708',
+                ],
+                'danger' => [
+                    '50' => '#fef3f2', '100' => '#fee4e2', '300' => '#fda29b',
+                    '400' => '#f97066', '500' => '#f04438', '600' => '#d92d20',
+                    '700' => '#b42318', '800' => '#912018',
+                ],
+                'info' => [
+                    '50' => '#f0f9ff', '300' => '#7cd4fd', '400' => '#36bffa',
+                    '500' => '#0ba5ec', '600' => '#0086c9',
+                ],
             ])
             ->font('Outfit', provider: GoogleFontProvider::class)
             ->assets([
@@ -132,7 +155,7 @@ class ArasyThemePlugin implements Plugin
                     return '';
                 }
 
-                return '<style data-arasy-preset="default">:root { --arasy-accent-rgb: 99, 102, 241; }</style>';
+                return '<style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>';
             }
         );
     }

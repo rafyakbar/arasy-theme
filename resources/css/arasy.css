@@ -10,53 +10,65 @@
 
 /* ---------- Design Tokens ---------- */
 :root {
-    --arasy-radius-card: 1rem;       /* 16px — rounded-2xl */
-    --arasy-radius-input: 0.5rem;    /* 8px — rounded-lg */
-    --arasy-radius-modal: 1.5rem;    /* 24px — rounded-3xl */
-    --arasy-radius-badge: 9999px;    /* rounded-full */
+    --arasy-radius-card: 1rem;
+    --arasy-radius-input: 0.5rem;
+    --arasy-radius-modal: 1.5rem;
+    --arasy-radius-badge: 9999px;
     --arasy-radius-pill: 9999px;
 
     --arasy-font: 'Outfit', ui-sans-serif, sans-serif;
     --arasy-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-    --arasy-sidebar-bg: #111827;
-    --arasy-sidebar-border: rgba(255, 255, 255, 0.06);
-    --arasy-sidebar-text: #9CA3AF;
-    --arasy-sidebar-icon: #6B7280;
-    --arasy-sidebar-hover-bg: rgba(255, 255, 255, 0.05);
-    --arasy-sidebar-active-bg: rgba(99, 102, 241, 0.11);
-    --arasy-sidebar-active-text: #818CF8;
-    --arasy-sidebar-active-icon: #818CF8;
-    --arasy-sidebar-group-label: #4B5563;
-
-    --arasy-surface-body: #F3F4F6;
+    --arasy-surface-body: #F9FAFB;
     --arasy-surface-card: #FFFFFF;
     --arasy-surface-elevated: #FFFFFF;
     --arasy-surface-input: #FFFFFF;
-    --arasy-text: #111827;
-    --arasy-text-secondary: #6B7280;
-    --arasy-text-muted: #9CA3AF;
-    --arasy-border: #E5E7EB;
-    --arasy-border-light: #F3F4F6;
+    --arasy-text: #1D2939;
+    --arasy-text-secondary: #475467;
+    --arasy-text-muted: #667085;
+    --arasy-border: #E4E7EC;
+    --arasy-border-light: #F2F4F7;
 
-    --arasy-accent-rgb: 99, 102, 241;
-    --arasy-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --arasy-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+    --arasy-sidebar-bg: #FFFFFF;
+    --arasy-sidebar-border: #E4E7EC;
+    --arasy-sidebar-text: #344054;
+    --arasy-sidebar-icon: #667085;
+    --arasy-sidebar-hover-bg: #F2F4F7;
+    --arasy-sidebar-active-bg: #ecf3ff;
+    --arasy-sidebar-active-text: #465fff;
+    --arasy-sidebar-active-icon: #465fff;
+    --arasy-sidebar-group-label: #98A2B3;
+
+    --arasy-accent-rgb: 70, 95, 255;
+    --arasy-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    --arasy-shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    --arasy-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------- Dark Mode Tokens ---------- */
 .dark {
-    --arasy-surface-body: #111827;
-    --arasy-surface-card: #1F2937;
-    --arasy-surface-elevated: #374151;
-    --arasy-surface-input: #1F2937;
+    --arasy-surface-body: #101828;
+    --arasy-surface-card: #1D2939;
+    --arasy-surface-elevated: #344054;
+    --arasy-surface-input: #1D2939;
     --arasy-text: #F9FAFB;
     --arasy-text-secondary: #D1D5DB;
-    --arasy-text-muted: #6B7280;
-    --arasy-border: rgba(255, 255, 255, 0.07);
-    --arasy-border-light: rgba(255, 255, 255, 0.05);
-    --arasy-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-    --arasy-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --arasy-text-muted: #667085;
+    --arasy-border: #1D2939;
+    --arasy-border-light: #1D2939;
+
+    --arasy-sidebar-bg: #101828;
+    --arasy-sidebar-border: rgba(255, 255, 255, 0.07);
+    --arasy-sidebar-text: #D1D5DB;
+    --arasy-sidebar-icon: #98A2B3;
+    --arasy-sidebar-hover-bg: rgba(255, 255, 255, 0.05);
+    --arasy-sidebar-active-bg: rgba(70, 95, 255, 0.12);
+    --arasy-sidebar-active-text: #7592ff;
+    --arasy-sidebar-active-icon: #7592ff;
+    --arasy-sidebar-group-label: #667085;
+
+    --arasy-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.2);
+    --arasy-shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.3), 0px 2px 4px -2px rgba(16, 24, 40, 0.15);
 }
 
 /* ---------- Body & Layout ---------- */
@@ -67,29 +79,35 @@
 }
 
 .fi-topbar {
-    background-color: #FEFEFE;
-    border-bottom: 1px solid var(--arasy-border);
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--arasy-sidebar-border);
 }
 
 .dark .fi-topbar {
-    background-color: #1F2937;
-    border-bottom: 1px solid var(--arasy-border);
+    background-color: #101828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* ---------- Sidebar (Always Dark) ---------- */
+/* ---------- Sidebar ---------- */
 .fi-sidebar,
 .fi-sidebar-header,
 .fi-sidebar-nav {
-    background-color: var(--arasy-sidebar-bg) !important;
+    background-color: var(--arasy-sidebar-bg);
 }
 
 .fi-sidebar {
     border-right: 1px solid var(--arasy-sidebar-border);
 }
 
+.fi-sidebar .fi-sidebar-item-btn {
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
 .fi-sidebar .fi-sidebar-item-label {
     color: var(--arasy-sidebar-text);
-    font-size: 13px;
+    font-size: 0.875rem;
 }
 
 .fi-sidebar .fi-sidebar-item-icon {
@@ -111,7 +129,7 @@
 
 .fi-sidebar .fi-sidebar-group-label {
     color: var(--arasy-sidebar-group-label);
-    font-size: 10.5px;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
@@ -141,7 +159,7 @@
 .fi-btn.fi-color-primary:not(.fi-outlined) {
     background-color: var(--primary-600);
     color: #FFFFFF;
-    transition: filter 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+    transition: filter var(--arasy-transition), background-color var(--arasy-transition), box-shadow var(--arasy-transition);
 }
 
 .fi-btn.fi-color-primary:not(.fi-outlined):hover {
@@ -162,7 +180,7 @@
     background-color: #FFFFFF;
     border: 1px solid var(--arasy-border);
     color: var(--arasy-text-secondary);
-    transition: background-color 140ms ease, border-color 140ms ease;
+    transition: background-color var(--arasy-transition), border-color var(--arasy-transition);
 }
 
 .fi-btn.fi-color-gray:not(.fi-outlined):hover {
@@ -186,7 +204,7 @@
     border-radius: var(--arasy-radius-input);
     border: 1px solid var(--arasy-border);
     background-color: var(--arasy-surface-input);
-    transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+    transition: border-color var(--arasy-transition), box-shadow var(--arasy-transition), background-color var(--arasy-transition);
 }
 
 .fi-input-wrp:focus-within {
@@ -361,8 +379,8 @@
 .fi-ta-row,
 .fi-input-wrp,
 .fi-btn {
-    transition: background-color 140ms ease, border-color 140ms ease,
-        box-shadow 140ms ease, color 140ms ease;
+    transition: background-color var(--arasy-transition), border-color var(--arasy-transition),
+        box-shadow var(--arasy-transition), color var(--arasy-transition);
 }
 
 /* ---------- Auth (Simple Layout) ---------- */
