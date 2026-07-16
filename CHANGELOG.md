@@ -1,17 +1,22 @@
 # Changelog
 
-## v1.0.0 — 2025-07-15
+## v1.0.0 — 2025-07-16
 
 Initial release of Arasy Theme.
 
 ### Added
 - Plugin class (`ArasyThemePlugin`) for Filament panel integration
 - Service provider with Spatie PackageTools
-- Color palette: primary (blue-violet), success (green), warning (amber), danger (red), info (blue), gray (zinc)
+- Color palette: primary (indigo), success (green), warning (amber), danger (red), info (blue), gray (zinc)
 - Outfit font via Google Font Provider
+- IBM Plex Mono font for code and tabular data
 - Full CSS override for all major Filament components
+- Design token system via CSS custom properties
 - Always-dark sidebar styling
-- Dark-themed auth pages with brand block
+- Dark mode support for all components
+- Cluster sub-navigation styling matching sidebar
+- Sidebar brand name (opt-in via `withSidebarBrandName()`)
+- Responsive sidebar layout (fixed, full-height, collapsible)
+- Consistent border radius: 1rem cards, 0.5rem inputs, 1.5rem modals
 - Install command (`php artisan arasy:install`)
-- Vite theme stub for custom compilation
-- Brand block blade view for login/register/reset-password pages
+- Auth page styling with brand block
