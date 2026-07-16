@@ -210,10 +210,6 @@
     box-shadow: var(--arasy-shadow-sm) !important;
     padding: 24px !important;
     align-self: flex-start !important;
-    position: sticky !important;
-    top: 0 !important;
-    min-height: 100dvh !important;
-    z-index: 10 !important;
 }
 
 .fi-page-sub-navigation-sidebar {
