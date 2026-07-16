@@ -203,22 +203,15 @@
 }
 
 /* ---------- Cluster Sub-Navigation ---------- */
-@media (min-width: 1024px) {
-    .fi-page-sub-navigation-sidebar-ctn {
-        position: sticky !important;
-        top: 0 !important;
-        height: 100dvh !important;
-        background-color: var(--arasy-sidebar-bg) !important;
-        border-right: 1px solid var(--arasy-sidebar-border) !important;
-        padding: 24px !important;
-        overflow-y: auto !important;
-    }
-}
-
 .fi-page-sub-navigation-sidebar-ctn {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100dvh !important;
     background-color: var(--arasy-sidebar-bg) !important;
     border-right: 1px solid var(--arasy-sidebar-border) !important;
     padding: 24px !important;
+    overflow-y: auto !important;
+    z-index: 10 !important;
 }
 
 .fi-page-sub-navigation-sidebar {
