@@ -146,6 +146,11 @@
         height: 100dvh !important;
         margin-top: 0 !important;
     }
+
+    .fi-body-has-sidebar-collapsible-on-desktop .fi-sidebar:not(.fi-sidebar-open),
+    .fi-body-has-sidebar-fully-collapsible-on-desktop .fi-sidebar:not(.fi-sidebar-open) {
+        width: var(--collapsed-sidebar-width) !important;
+    }
 }
 
 .fi-sidebar-header-ctn {
