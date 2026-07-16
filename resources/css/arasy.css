@@ -181,6 +181,22 @@
     padding-bottom: 28px !important;
 }
 
+/* ---------- Sidebar Brand Name ---------- */
+.arasy-sidebar-brand-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1D2939;
+    white-space: nowrap;
+}
+
+.dark .arasy-sidebar-brand-name {
+    color: #F9FAFB;
+}
+
+.fi-sidebar:not(.fi-sidebar-open) .arasy-sidebar-brand-name {
+    display: none;
+}
+
 /* ---------- Topbar Layout (Content Area) ---------- */
 @media (min-width: 1024px) {
     .fi-topbar-ctn {

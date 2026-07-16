@@ -12,6 +12,8 @@ use Filament\View\PanelsRenderHook;
 
 class ArasyThemePlugin implements Plugin
 {
+    protected bool $showSidebarBrandName = false;
+
     public static function make(): static
     {
         return app(static::class);
@@ -20,6 +22,13 @@ class ArasyThemePlugin implements Plugin
     public function getId(): string
     {
         return 'arasy-theme';
+    }
+
+    public function withSidebarBrandName(bool $condition = true): static
+    {
+        $this->showSidebarBrandName = $condition;
+
+        return $this;
     }
 
     public function register(Panel $panel): void
@@ -69,6 +78,7 @@ class ArasyThemePlugin implements Plugin
             ], 'arasy/arasy-theme');
 
         $this->registerPresetStyleRenderHook($panel);
+        $this->registerSidebarBrandRenderHook($panel);
     }
 
     public function boot(Panel $panel): void
@@ -89,6 +99,30 @@ class ArasyThemePlugin implements Plugin
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>';
+            }
+        );
+    }
+
+    protected function registerSidebarBrandRenderHook(Panel $panel): void
+    {
+        FilamentView::registerRenderHook(
+            PanelsRenderHook::SIDEBAR_LOGO_AFTER,
+            function () use ($panel): string {
+                if (Filament::getCurrentPanel()?->getId() !== $panel->getId()) {
+                    return '';
+                }
+
+                if (! $this->showSidebarBrandName) {
+                    return '';
+                }
+
+                if (! filled(filament()->getBrandLogo())) {
+                    return '';
+                }
+
+                return view('arasy-theme::sidebar-brand-name', [
+                    'brandName' => filament()->getBrandName(),
+                ])->render();
             }
         );
     }
