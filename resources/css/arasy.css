@@ -206,12 +206,13 @@
 .fi-page-sub-navigation-sidebar-ctn {
     background-color: var(--arasy-sidebar-bg) !important;
     border-right: 1px solid var(--arasy-sidebar-border) !important;
+    border-radius: 1rem !important;
     padding: 24px !important;
     overflow-y: auto !important;
     align-self: flex-start !important;
     position: sticky !important;
     top: 0 !important;
-    max-height: 100dvh !important;
+    height: 100dvh !important;
 }
 
 .fi-page-sub-navigation-sidebar {
