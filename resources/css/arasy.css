@@ -167,17 +167,19 @@
 @media (min-width: 1024px) {
     .fi-topbar-ctn {
         margin-left: var(--collapsed-sidebar-width);
-    }
-
-    .fi-body:has(.fi-sidebar-open) .fi-topbar-ctn {
-        margin-left: var(--sidebar-width);
+        transition: margin-left var(--arasy-transition);
     }
 
     .fi-main-ctn {
         margin-left: var(--collapsed-sidebar-width);
+        transition: margin-left var(--arasy-transition);
     }
 
-    .fi-body:has(.fi-sidebar-open) .fi-main-ctn {
+    .fi-body:has(.fi-main-ctn-sidebar-open) .fi-topbar-ctn {
+        margin-left: var(--sidebar-width);
+    }
+
+    .fi-main-ctn-sidebar-open {
         margin-left: var(--sidebar-width);
     }
 }
