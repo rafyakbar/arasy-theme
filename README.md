@@ -45,7 +45,7 @@
 ## Installation
 
 ```bash
-composer require rafyakbar/arasy-theme:dev-main
+composer require rafyakbar/arasy-theme
 ```
 
 ### Automatic Setup
