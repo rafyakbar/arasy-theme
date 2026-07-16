@@ -205,14 +205,15 @@
 /* ---------- Cluster Sub-Navigation ---------- */
 .fi-page-sub-navigation-sidebar-ctn {
     background-color: var(--arasy-sidebar-bg) !important;
-    border-right: 1px solid var(--arasy-sidebar-border) !important;
+    border: 1px solid var(--arasy-sidebar-border) !important;
     border-radius: 1rem !important;
+    box-shadow: var(--arasy-shadow-sm) !important;
     padding: 24px !important;
-    overflow-y: auto !important;
     align-self: flex-start !important;
     position: sticky !important;
     top: 0 !important;
-    height: 100dvh !important;
+    min-height: 100dvh !important;
+    z-index: 10 !important;
 }
 
 .fi-page-sub-navigation-sidebar {
