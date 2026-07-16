@@ -166,19 +166,19 @@
 /* ---------- Topbar Layout (Content Area) ---------- */
 @media (min-width: 1024px) {
     .fi-topbar-ctn {
-        margin-left: var(--sidebar-width);
+        margin-left: var(--collapsed-sidebar-width);
     }
 
-    .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-topbar-ctn {
-        margin-left: var(--collapsed-sidebar-width);
+    .fi-body:has(.fi-sidebar-open) .fi-topbar-ctn {
+        margin-left: var(--sidebar-width);
     }
 
     .fi-main-ctn {
-        margin-left: var(--sidebar-width);
+        margin-left: var(--collapsed-sidebar-width);
     }
 
-    .fi-body-has-sidebar-collapsible-on-desktop:has(.fi-sidebar:not(.fi-sidebar-open)) .fi-main-ctn {
-        margin-left: var(--collapsed-sidebar-width);
+    .fi-body:has(.fi-sidebar-open) .fi-main-ctn {
+        margin-left: var(--sidebar-width);
     }
 }
 
