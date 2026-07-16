@@ -187,6 +187,7 @@
     font-weight: 600;
     color: #1D2939;
     white-space: nowrap;
+    margin-left: 0.75rem;
 }
 
 .dark .arasy-sidebar-brand-name {
@@ -195,6 +196,10 @@
 
 .fi-sidebar:not(.fi-sidebar-open) .arasy-sidebar-brand-name {
     display: none;
+}
+
+.fi-sidebar-header-logo-ctn {
+    flex-shrink: 0;
 }
 
 /* ---------- Topbar Layout (Content Area) ---------- */
