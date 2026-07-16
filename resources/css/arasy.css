@@ -204,58 +204,72 @@
 
 /* ---------- Cluster Sub-Navigation ---------- */
 .fi-page-sub-navigation-sidebar-ctn {
-    background-color: var(--arasy-sidebar-bg);
-    border-right: 1px solid var(--arasy-sidebar-border);
-    padding: 24px 16px;
+    background-color: var(--arasy-sidebar-bg) !important;
+    border-right: 1px solid var(--arasy-sidebar-border) !important;
+    padding: 24px !important;
 }
 
 .fi-page-sub-navigation-sidebar {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-group {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
+}
+
+.fi-page-sub-navigation-sidebar .fi-sidebar-group-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-group-label {
-    color: var(--arasy-sidebar-group-label);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.5rem 0.75rem;
-    font-weight: 600;
+    color: var(--arasy-sidebar-group-label) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item-btn {
-    gap: 0.75rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    color: var(--arasy-sidebar-text);
-    transition: background-color var(--arasy-transition), color var(--arasy-transition);
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    color: var(--arasy-sidebar-text) !important;
+    transition: background-color var(--arasy-transition), color var(--arasy-transition) !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item-btn:hover {
-    background-color: var(--arasy-sidebar-hover-bg);
+    background-color: var(--arasy-sidebar-hover-bg) !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item-icon {
-    color: var(--arasy-sidebar-icon);
+    color: var(--arasy-sidebar-icon) !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item-label {
-    color: var(--arasy-sidebar-text);
-    font-size: 0.875rem;
+    color: var(--arasy-sidebar-text) !important;
+    font-size: 0.875rem !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-btn {
-    background-color: var(--arasy-sidebar-active-bg);
+    background-color: var(--arasy-sidebar-active-bg) !important;
 }
 
 .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
 .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
-    color: var(--arasy-sidebar-active-text);
+    color: var(--arasy-sidebar-active-text) !important;
+}
+
+.fi-page-sub-navigation-sidebar .fi-sidebar-group-items {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* ---------- Topbar Layout (Content Area) ---------- */
