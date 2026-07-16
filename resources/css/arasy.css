@@ -173,17 +173,17 @@
 
 .fi-body-has-topbar .fi-sidebar-header {
     display: flex !important;
+    align-items: center !important;
     box-shadow: none !important;
     --tw-ring-color: transparent !important;
     --tw-ring-shadow: 0 0 transparent !important;
     border-bottom: none !important;
-    padding-top: 32px !important;
-    padding-bottom: 28px !important;
+    padding: 32px 24px 28px !important;
 }
 
 /* ---------- Sidebar Brand Name ---------- */
 .arasy-sidebar-brand-name {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #1D2939;
     white-space: nowrap;
