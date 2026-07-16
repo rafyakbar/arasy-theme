@@ -79,6 +79,7 @@ class ArasyThemePlugin implements Plugin
 
         $this->registerPresetStyleRenderHook($panel);
         $this->registerSidebarBrandRenderHook($panel);
+        $this->registerClusterSubNavigationStyleRenderHook($panel);
     }
 
     public function boot(Panel $panel): void
@@ -123,6 +124,85 @@ class ArasyThemePlugin implements Plugin
                 return view('arasy-theme::sidebar-brand-name', [
                     'brandName' => filament()->getBrandName(),
                 ])->render();
+            }
+        );
+    }
+
+    protected function registerClusterSubNavigationStyleRenderHook(Panel $panel): void
+    {
+        FilamentView::registerRenderHook(
+            PanelsRenderHook::HEAD_END,
+            function () use ($panel): string {
+                if (Filament::getCurrentPanel()?->getId() !== $panel->getId()) {
+                    return '';
+                }
+
+                return '<style data-arasy-cluster-nav>
+.fi-page-sub-navigation-sidebar-ctn {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100dvh !important;
+    background-color: var(--arasy-sidebar-bg, #ffffff) !important;
+    border-right: 1px solid var(--arasy-sidebar-border, #e4e7ec) !important;
+    padding: 24px !important;
+    overflow-y: auto !important;
+    z-index: 10 !important;
+}
+.fi-page-sub-navigation-sidebar {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    color: var(--arasy-sidebar-text, #344054) !important;
+    transition: background-color 150ms ease, color 150ms ease !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item-btn:hover {
+    background-color: var(--arasy-sidebar-hover-bg, #f2f4f7) !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item-icon {
+    color: var(--arasy-sidebar-icon, #667085) !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item-label {
+    color: var(--arasy-sidebar-text, #344054) !important;
+    font-size: 0.875rem !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-btn {
+    background-color: var(--arasy-sidebar-active-bg, #ecf3ff) !important;
+}
+.fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    color: var(--arasy-sidebar-active-text, #465fff) !important;
+}
+.dark .fi-page-sub-navigation-sidebar-ctn {
+    background-color: var(--arasy-sidebar-bg, #101828) !important;
+    border-right-color: var(--arasy-sidebar-border, rgba(255, 255, 255, 0.07)) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item-btn {
+    color: var(--arasy-sidebar-text, #d1d5db) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item-icon {
+    color: var(--arasy-sidebar-icon, #98a2b3) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item-label {
+    color: var(--arasy-sidebar-text, #d1d5db) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item-btn:hover {
+    background-color: var(--arasy-sidebar-hover-bg, rgba(255, 255, 255, 0.05)) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-btn {
+    background-color: var(--arasy-sidebar-active-bg, rgba(70, 95, 255, 0.12)) !important;
+}
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.dark .fi-page-sub-navigation-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    color: var(--arasy-sidebar-active-text, #7592ff) !important;
+}
+</style>';
             }
         );
     }
