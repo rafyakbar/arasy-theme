@@ -14,6 +14,8 @@ class ArasyThemePlugin implements Plugin
 {
     protected bool $showSidebarBrandName = false;
 
+    protected bool $showCollapsedLogo = true;
+
     public static function make(): static
     {
         return app(static::class);
@@ -27,6 +29,20 @@ class ArasyThemePlugin implements Plugin
     public function withSidebarBrandName(bool $condition = true): static
     {
         $this->showSidebarBrandName = $condition;
+
+        return $this;
+    }
+
+    public function withCollapsedLogo(bool $condition = true): static
+    {
+        $this->showCollapsedLogo = $condition;
+
+        return $this;
+    }
+
+    public function withoutCollapsedLogo(): static
+    {
+        $this->showCollapsedLogo = false;
 
         return $this;
     }
@@ -128,13 +144,15 @@ class ArasyThemePlugin implements Plugin
                 $alt = e(filament()->getBrandName());
                 $homeUrl = e(filament()->getHomeUrl() ?? url('/'));
 
-                $html .= <<<HTML
-                <div x-show="!\$store.sidebar.isOpen" class="arasy-sidebar-logo-collapsed" style="display:none;">
-                    <a href="{$homeUrl}" style="display:flex;align-items:center;justify-content:center;">
-                        <img src="{$logo}" alt="{$alt}" style="height:2rem;">
-                    </a>
-                </div>
-                HTML;
+                if ($this->showCollapsedLogo) {
+                    $html .= <<<HTML
+                    <div x-show="!\$store.sidebar.isOpen" class="arasy-sidebar-logo-collapsed" style="display:none;">
+                        <a href="{$homeUrl}" style="display:flex;align-items:center;justify-content:center;">
+                            <img src="{$logo}" alt="{$alt}" style="height:2rem;">
+                        </a>
+                    </div>
+                    HTML;
+                }
 
                 return $html;
             }

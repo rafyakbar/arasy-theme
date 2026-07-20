@@ -86,6 +86,24 @@ use ArasyTheme\ArasyThemePlugin;
 
 ArasyThemePlugin::make()
     ->withSidebarBrandName();   // Show brand name beside logo in sidebar
+    ->withoutCollapsedLogo();   // Hide logo when sidebar is collapsed
+```
+
+### Collapsed Sidebar Logo
+
+When the sidebar is collapsed, the logo remains visible and centered by default.  
+You can disable this if you prefer an empty collapsed sidebar header:
+
+```php
+ArasyThemePlugin::make()
+    ->withoutCollapsedLogo();
+```
+
+Or explicitly enable it (default behavior):
+
+```php
+ArasyThemePlugin::make()
+    ->withCollapsedLogo();
 ```
 
 ### Sidebar Brand Name

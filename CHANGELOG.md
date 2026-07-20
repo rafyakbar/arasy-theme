@@ -1,6 +1,10 @@
 # Changelog
 
-## v1.1.0 — 2026-07-20
+## Unreleased
+
+### Added
+- Collapsed sidebar logo support — logo stays visible and centered when sidebar is collapsed
+- `withCollapsedLogo()` / `withoutCollapsedLogo()` fluent methods to control collapsed logo behavior
 
 ### Fixed
 - Collapsed sidebar logo now visible and centered (Alpine `x-show` no longer hides it)
