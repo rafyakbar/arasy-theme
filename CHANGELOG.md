@@ -3,11 +3,10 @@
 ## Unreleased
 
 ### Added
-- Collapsed sidebar logo support — logo stays visible and centered when sidebar is collapsed
-- `withCollapsedLogo()` / `withoutCollapsedLogo()` fluent methods to control collapsed logo behavior
+- `withCollapsedLogo()` fluent method — opt-in to show logo centered when sidebar is collapsed
 
 ### Fixed
-- Collapsed sidebar logo now visible and centered (Alpine `x-show` no longer hides it)
+- Collapsed sidebar logo now visible and centered when `withCollapsedLogo()` is enabled
 - Injected dedicated collapsed logo element via render hook with `x-show="!$store.sidebar.isOpen"`
 - Removed `Alpine.effect()` script (no longer needed)
 - Logo forced to 2rem x 2rem with `object-fit: contain` for consistent sizing

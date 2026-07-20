@@ -14,7 +14,7 @@ class ArasyThemePlugin implements Plugin
 {
     protected bool $showSidebarBrandName = false;
 
-    protected bool $showCollapsedLogo = true;
+    protected bool $showCollapsedLogo = false;
 
     public static function make(): static
     {
@@ -36,13 +36,6 @@ class ArasyThemePlugin implements Plugin
     public function withCollapsedLogo(bool $condition = true): static
     {
         $this->showCollapsedLogo = $condition;
-
-        return $this;
-    }
-
-    public function withoutCollapsedLogo(): static
-    {
-        $this->showCollapsedLogo = false;
 
         return $this;
     }
