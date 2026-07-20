@@ -98,8 +98,7 @@ class ArasyThemePlugin implements Plugin
                 return '<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>
-<script>document.addEventListener("alpine:init",function(){!function n(){var s=Alpine.store("sidebar");if(!s)return setTimeout(n,50);Alpine.effect(function(){s.isOpen||document.querySelector(".fi-sidebar-header-logo-ctn")?.style.removeProperty("display")})}()});</script>';
+<style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>';
             }
         );
     }
@@ -113,17 +112,31 @@ class ArasyThemePlugin implements Plugin
                     return '';
                 }
 
-                if (! $this->showSidebarBrandName) {
-                    return '';
-                }
-
                 if (! filled(filament()->getBrandLogo())) {
                     return '';
                 }
 
-                return view('arasy-theme::sidebar-brand-name', [
-                    'brandName' => filament()->getBrandName(),
-                ])->render();
+                $html = '';
+
+                if ($this->showSidebarBrandName) {
+                    $html .= view('arasy-theme::sidebar-brand-name', [
+                        'brandName' => filament()->getBrandName(),
+                    ])->render();
+                }
+
+                $logo = e(filament()->getBrandLogo());
+                $alt = e(filament()->getBrandName());
+                $homeUrl = e(filament()->getHomeUrl() ?? url('/'));
+
+                $html .= <<<HTML
+                <div x-show="!\$store.sidebar.isOpen" class="arasy-sidebar-logo-collapsed" style="display:none;">
+                    <a href="{$homeUrl}" style="display:flex;align-items:center;justify-content:center;">
+                        <img src="{$logo}" alt="{$alt}" style="height:2rem;">
+                    </a>
+                </div>
+                HTML;
+
+                return $html;
             }
         );
     }

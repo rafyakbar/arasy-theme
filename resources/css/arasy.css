@@ -183,38 +183,35 @@
 
 /* ---------- Collapsed Sidebar Header ---------- */
 .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header {
+    position: relative;
+    justify-content: center !important;
+    align-items: center !important;
     padding: 0.5rem 0 !important;
-    justify-content: center !important;
-    align-items: center !important;
 }
 
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn {
-    margin: 0 auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex: 0 0 auto !important;
+.arasy-sidebar-logo-collapsed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn img {
-    width: 2rem !important;
-    height: 2rem !important;
-    object-fit: contain !important;
+.fi-sidebar:not(.fi-sidebar-open) .arasy-sidebar-logo-collapsed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+.fi-sidebar:not(.fi-sidebar-open) .arasy-sidebar-logo-collapsed img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
 }
 
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn .fi-logo {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    line-height: 1 !important;
-    font-size: 0.75rem !important;
-    text-align: center !important;
+.fi-sidebar:not(.fi-sidebar-open) .arasy-sidebar-logo-collapsed a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ---------- Sidebar Brand Name ---------- */
