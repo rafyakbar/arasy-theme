@@ -194,15 +194,10 @@
     flex: 0 0 auto !important;
 }
 
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn img,
-.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn .fi-logo {
-    max-width: 2rem !important;
-    max-height: 2rem !important;
+.fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn img {
+    width: 2rem !important;
+    height: 2rem !important;
     object-fit: contain !important;
-    line-height: 1 !important;
-    font-size: 0.75rem !important;
-    text-align: center !important;
-    overflow: hidden !important;
 }
 
 .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn a {
@@ -215,6 +210,9 @@
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+    line-height: 1 !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
 }
 
 /* ---------- Sidebar Brand Name ---------- */
