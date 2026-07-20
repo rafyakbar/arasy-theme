@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 — 2026-07-20
+
+### Added
+- Sleek custom scrollbar — thin (5px), rounded pill-style thumb, transparent track
+- Scrollbar colors adapt to light/dark mode
+
 ## v1.1.1 — 2026-07-20
 
 ### Added

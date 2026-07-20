@@ -582,6 +582,38 @@
         box-shadow var(--arasy-transition), color var(--arasy-transition);
 }
 
+/* ---------- Sleek Scrollbar ---------- */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--arasy-text-muted) transparent;
+}
+
+html ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+html ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb {
+    background-color: var(--arasy-text-muted);
+    border-radius: 9999px;
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--arasy-text-secondary);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #475467;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #667085;
+}
+
 /* ---------- Utility ---------- */
 .arasy-mono {
     font-family: var(--arasy-font-mono);
