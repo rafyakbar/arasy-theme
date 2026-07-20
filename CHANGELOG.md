@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.1.0 — 2026-07-20
+## v1.1.1 — 2026-07-20
 
 ### Added
 - `withCollapsedLogo()` fluent method — opt-in to show logo centered when sidebar is collapsed
