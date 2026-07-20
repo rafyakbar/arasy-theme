@@ -99,7 +99,7 @@ class ArasyThemePlugin implements Plugin
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style data-arasy-preset="default">:root { --arasy-accent-rgb: 70, 95, 255; }</style>
-<script>document.addEventListener("alpine:init",function(){Alpine.effect(function(){if(Alpine.store("sidebar").isOpen)return;var e=document.querySelector(".fi-sidebar-header-logo-ctn");e&&e.style.removeProperty("display")})});</script>';
+<script>document.addEventListener("alpine:init",function(){!function n(){var s=Alpine.store("sidebar");if(!s)return setTimeout(n,50);Alpine.effect(function(){s.isOpen||document.querySelector(".fi-sidebar-header-logo-ctn")?.style.removeProperty("display")})}()});</script>';
             }
         );
     }
