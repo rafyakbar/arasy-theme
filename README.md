@@ -17,28 +17,8 @@
 
 A modern FilamentPHP v5 theme plugin inspired by the TailAdmin design language — vibrant indigo accents, Outfit typography, consistent border radius, sleek custom scrollbar, and full dark mode support.
 
----
-
-## Screenshots
-
-<p align="center">
-    <img src="art/light-mode.png" alt="Light Mode" width="45%">
-    <img src="art/dark-mode.png" alt="Dark Mode" width="45%">
-</p>
-<p align="center">
-    <img src="art/light-mode_sidebar-collapsed.png" alt="Light Mode — Collapsed Sidebar" width="45%">
-    <img src="art/dark-mode_sidebar-collapsed.png" alt="Dark Mode — Collapsed Sidebar" width="45%">
-</p>
-<p align="center">
-    <img src="art/light-mode_cluster.png" alt="Light Mode — Cluster" width="45%">
-    <img src="art/dark-mode_cluster.png" alt="Dark Mode — Cluster" width="45%">
-</p>
-
----
-
 **Table of Contents**
 
-- [Screenshots](#screenshots)
 - [Features](#features)
 - [Compatibility](#compatibility)
 - [Requirements](#requirements)
@@ -85,6 +65,25 @@ A modern FilamentPHP v5 theme plugin inspired by the TailAdmin design language �
 - PHP 8.2+
 - Laravel 10+
 - Filament v5.0+
+
+---
+
+## Screenshots
+
+<p align="center">
+    <img src="art/light-mode.png" alt="Light Mode" width="45%">
+    <img src="art/dark-mode.png" alt="Dark Mode" width="45%">
+</p>
+<p align="center">
+    <img src="art/light-mode_sidebar-collapsed.png" alt="Light Mode — Collapsed Sidebar" width="45%">
+    <img src="art/dark-mode_sidebar-collapsed.png" alt="Dark Mode — Collapsed Sidebar" width="45%">
+</p>
+<p align="center">
+    <img src="art/light-mode_cluster.png" alt="Light Mode — Cluster" width="45%">
+    <img src="art/dark-mode_cluster.png" alt="Dark Mode — Cluster" width="45%">
+</p>
+
+---
 
 ## Installation
 
