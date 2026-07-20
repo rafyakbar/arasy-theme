@@ -183,11 +183,13 @@
 
 /* ---------- Collapsed Sidebar Header ---------- */
 .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header {
-    padding: 1rem 0.5rem !important;
+    padding: 0.5rem 0 !important;
     justify-content: center !important;
+    align-items: center !important;
 }
 
 .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-header-logo-ctn {
+    margin: 0 auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
