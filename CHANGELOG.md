@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.0 — 2026-07-20
+
+### Fixed
+- Collapsed sidebar logo now visible and centered (Alpine `x-show` no longer hides it)
+- Injected dedicated collapsed logo element via render hook with `x-show="!$store.sidebar.isOpen"`
+- Removed `Alpine.effect()` script (no longer needed)
+- Logo forced to 2rem x 2rem with `object-fit: contain` for consistent sizing
+
 ## v1.0.0 — 2025-07-16
 
 Initial release of Arasy Theme.

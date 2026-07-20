@@ -22,7 +22,8 @@
 - **Design Tokens** — CSS custom properties for border radius, shadows, colors, and transitions
 - **Full Dark Mode** — Every surface, border, text, and shadow has a dark variant; sidebar included
 - **Consistent Border Radius** — 16px cards, 8px inputs, 24px modals, pill badges
-- **Sidebar Brand Name** — Optional brand name display beside the logo
+- **Sidebar Brand Name** — Optional brand name display beside the logo, responsive to collapse state
+- **Collapsed Sidebar Logo** — Logo stays visible and centered when sidebar is collapsed
 - **Cluster Sub-Navigation** — Styled cluster navigation matching the sidebar appearance
 - **Auth Pages** — Dark-themed login, register, and password reset pages with brand block
 - **Plain CSS** — No build step required for the theme; loaded as a Filament asset
