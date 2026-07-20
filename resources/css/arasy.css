@@ -583,44 +583,66 @@
 }
 
 /* ---------- Sleek Scrollbar ---------- */
-:root {
-    --arasy-scrollbar-thumb: rgba(0, 0, 0, 0.16);
-    --arasy-scrollbar-thumb-hover: rgba(0, 0, 0, 0.28);
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--arasy-text-muted) transparent;
 }
 
-.dark {
-    --arasy-scrollbar-thumb: rgba(255, 255, 255, 0.30);
-    --arasy-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
-}
-
-::-webkit-scrollbar {
+html ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
 
-::-webkit-scrollbar-track {
+html ::-webkit-scrollbar-track {
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--arasy-scrollbar-thumb) !important;
-    border-radius: 9999px !important;
-    border: none !important;
+html ::-webkit-scrollbar-thumb {
+    background-color: var(--arasy-text-muted);
+    border-radius: 9999px;
     min-height: 32px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--arasy-scrollbar-thumb-hover) !important;
+html ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--arasy-text-secondary);
 }
 
-::-webkit-scrollbar-corner {
+html ::-webkit-scrollbar-corner {
     background: transparent;
 }
 
-/* Firefox */
-* {
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #475467;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #667085;
+}
+
+/* ---------- Sidebar Nav Scrollbar ---------- */
+.fi-sidebar-nav {
     scrollbar-width: thin;
-    scrollbar-color: var(--arasy-scrollbar-thumb) transparent;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar {
+    width: 3px;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.10);
+    border-radius: 9999px;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+.dark .fi-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark .fi-sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.22);
 }
 
 /* ---------- Utility ---------- */
