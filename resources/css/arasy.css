@@ -585,12 +585,12 @@
 /* ---------- Sleek Scrollbar ---------- */
 html {
     scrollbar-width: thin;
-    scrollbar-color: var(--arasy-text-muted) transparent;
+    scrollbar-color: rgba(0, 0, 0, 0.16) transparent;
 }
 
 html ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
 }
 
 html ::-webkit-scrollbar-track {
@@ -598,20 +598,53 @@ html ::-webkit-scrollbar-track {
 }
 
 html ::-webkit-scrollbar-thumb {
-    background-color: var(--arasy-text-muted);
+    background-color: rgba(0, 0, 0, 0.16);
     border-radius: 9999px;
+    border: none;
+    min-height: 32px;
 }
 
 html ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--arasy-text-secondary);
+    background-color: rgba(0, 0, 0, 0.28);
+}
+
+html ::-webkit-scrollbar-corner {
+    background: transparent;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background-color: #475467;
+    background-color: rgba(255, 255, 255, 0.14);
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-    background-color: #667085;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+/* ---------- Sidebar Nav Scrollbar ---------- */
+.fi-sidebar-nav {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.10) transparent;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar {
+    width: 3px;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.10);
+    border-radius: 9999px;
+}
+
+.fi-sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+.dark .fi-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .fi-sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.16);
 }
 
 /* ---------- Utility ---------- */
