@@ -583,6 +583,16 @@
 }
 
 /* ---------- Sleek Scrollbar ---------- */
+:root {
+    --arasy-scrollbar-thumb: rgba(0, 0, 0, 0.16);
+    --arasy-scrollbar-thumb-hover: rgba(0, 0, 0, 0.28);
+}
+
+.dark {
+    --arasy-scrollbar-thumb: rgba(255, 255, 255, 0.30);
+    --arasy-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+}
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -593,36 +603,24 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.16) !important;
+    background-color: var(--arasy-scrollbar-thumb) !important;
     border-radius: 9999px !important;
     border: none !important;
     min-height: 32px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.28) !important;
+    background-color: var(--arasy-scrollbar-thumb-hover) !important;
 }
 
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.30) !important;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.45) !important;
-}
-
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.16) transparent;
-}
-
-.dark * {
-    scrollbar-color: rgba(255, 255, 255, 0.30) transparent;
+    scrollbar-color: var(--arasy-scrollbar-thumb) transparent;
 }
 
 /* ---------- Utility ---------- */
