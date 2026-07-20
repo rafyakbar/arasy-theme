@@ -608,11 +608,11 @@
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.18) !important;
+    background-color: rgba(255, 255, 255, 0.30) !important;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.30) !important;
+    background-color: rgba(255, 255, 255, 0.45) !important;
 }
 
 /* Firefox */
@@ -622,7 +622,7 @@
 }
 
 .dark * {
-    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.30) transparent;
 }
 
 /* ---------- Utility ---------- */
